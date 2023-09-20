@@ -6,7 +6,7 @@
 let fullName = "Mikel Roper";
 let currentYear = "2023";
 //let profilePicture = "D:\\byu-idaho\\CSE121B - Intro to Javascript\\cse121b\\images\\me.jpg";
-const profilePicture = "/images/me.png";
+const profilePicture = "/images/me.jpg";
 
 
 /* Step 3 - Element Variables */
