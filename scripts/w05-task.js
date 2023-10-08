@@ -5,7 +5,6 @@ const templesElement = document.getElementById("temples");
 let templeList=[];
 /* async displayTemples Function */
 const displayTemples = (temples) => {
-    console.log("Displaying Temples:", temples); // Add
     temples.forEach((temple) => {
         //Create HTML <article> element.
         const articleElement = document.createElement('article');
@@ -42,7 +41,6 @@ const getTemples = async () => {
     const temples = await response.json();
     templeList = temples;
     console.log(templeList);
-    console.log("Temple List:", templeList); // Add
 }
 
 /* reset Function */
@@ -56,7 +54,6 @@ const reset = () => {
 
 /* sortBy Function */
 const sortBy = (temples) => {
-    console.log("Sorting Temples:", temples); // Add
     reset();
     const filter = document.getElementById("sortBy").value;
     switch (filter) {
@@ -89,7 +86,6 @@ const sortBy = (temples) => {
 /* Event Listener */
 document.querySelector("#sortBy").addEventListener("change", () => {
     sortBy(templeList);
-    getTemples();
   })
 
 getTemples();
