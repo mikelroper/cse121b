@@ -11,22 +11,22 @@ const displayTemples = (temples) => {
         const articleElement = document.createElement('article');
       
         // Create HTML <h3> element and add the temple's templeName property to it.
-        const h3 = document.createElement('h3');
-        h3.textContent = temple.templeName;
+        const h3Element = document.createElement('h3');
+        h3Element.textContent = temple.templeName;
       
         // Create HTML <img> element, set its src and alt attributes.
         const imgElement = document.createElement('img');
-        img.src = temple.imageUrl;
-        img.alt = temple.location;
+        imgElement.src = temple.imageUrl;
+        imgElement.alt = temple.location;
       
         // Append the <h3> element and the <img> element to the <article> element.
-        article.appendChild(h3);
-        article.appendChild(img);
+        articleElement.appendChild(h3Element);
+        articleElement.appendChild(imgElement);
       
         // Append the <article> element to the global templesElement variable.
-        templesElement.appendChild(article);
+        templesElement.appendChild(articleElement);
       });
-};
+}
 
 
 
@@ -43,7 +43,7 @@ const getTemples = async () => {
     templeList = temples;
     console.log(templeList);
     console.log("Temple List:", templeList); // Add
-};
+}
 
 /* reset Function */
 const reset = () => {
@@ -52,7 +52,7 @@ const reset = () => {
     while (templesElement.firstChild) {
       templesElement.removeChild(templesElement.firstChild);
     }
-  };
+  }
 
 /* sortBy Function */
 const sortBy = (temples) => {
@@ -80,7 +80,7 @@ const sortBy = (temples) => {
           console.error("Invalid filter value");
           break;
       }
-};
+}
 
 
 
@@ -90,6 +90,6 @@ const sortBy = (temples) => {
 document.querySelector("#sortBy").addEventListener("change", () => {
     sortBy(templeList);
     getTemples();
-  });
+  })
 
 getTemples();
