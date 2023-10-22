@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE 121b | Final Project - Cat Joy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <nav>
+        <ul id="menu">
+          <li><a id="toggleMenu">&equiv;</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="w01-task.html">W1 Task</a></li>
+          <li><a href="w03-task.html">W3 Task</a></li>
+          <li><a href="w04-task.html">W4 Task</a></li>
+          <li><a href="w05-task.html">W5 Task</a></li>
+          <li><a href="project.html" class="active">Project</a></li>
+        </ul>
+      </nav>
+      <main id="gridly">
+        <h1>Cat Joy</h1>
+        <h2>Sharing the Joy of Cats</h2>
+    
+        <select id="sortBy" title="Choose a data filter.">
+          <option value="" disabled selected>Cat Filter</option>
+          <option value="whiskers">Whisker Facts</option>
+          <option value="allcats">All Facts</option>
+        </select>
+        <button id="seeCatsButton">See Cats</button>
+        <!-- <button id="clearCatsButton">Clear Cats</button> -->
+        <div id="cats">
+        </div>
+        <div id="catContainer">
+        <div id="catFactContainer">
+          
+        </div>
+    <footer>
+      &copy;<span id="year"></span> | Project - Fetching Temple Data | CSE 121b
+    </footer>
+    <script type="module" src="scripts/project-task.js"></script>
+    <script>
+      document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+</body>
+</html>
