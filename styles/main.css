@@ -315,8 +315,7 @@ footer {
 
 
 
-    /* cat code */
-    
+/* cat code */    
 #sortBy {
     display: block;
     margin: 0 auto;
@@ -326,12 +325,12 @@ footer {
   /* Center the "See Cats" button */
 #seeCatsButton {
     display: block;
-    margin: 10px auto; /* Adjust the margin as needed */
+    margin: 10px auto; 
   }
 
 #clearCatsButton {
     display: block;
-    margin: 10px auto; /* Adjust the margin as needed */
+    margin: 10px auto; 
   }
   
  /* Center the cat images within the #cats container */
@@ -341,26 +340,26 @@ footer {
 
 /* Style for the container that holds both the cat image and fact */
 #catImageContainer {
-  position: relative; /* Set the container as a relative position parent */
-  text-align: center; /* Center its children horizontally */
+  position: relative; 
+  text-align: center; 
 }
 
 /* Style for the cat image */
 #catImage {
   display: block;
-  max-width: 100%; /* Make sure the image doesn't exceed its container */
+  max-width: 100%; 
 }
 
 /* Style for the cat fact text */
 #catFact {
-  background-color: rgba(255, 255, 255, 0.8); /* Background color with some transparency */
+  background-color: rgba(255, 255, 255, 0.8); 
   position: absolute; /* Position the cat fact absolutely within the container */
-  top: 0; /* Position at the top of the container */
-  left: 0; /* Position at the left of the container */
-  right: 0; /* Stretch the fact to the right edge */
-  padding: 10px; /* Add padding for spacing */
-  text-align: left; /* Align text to the left within the container */
-  z-index: 1; /* Ensure the cat fact is above the cat image */
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  padding: 10px; 
+  text-align: left; 
+  z-index: 1; 
 }
 
 

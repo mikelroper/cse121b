@@ -48,47 +48,24 @@ document.querySelector('#seeCatsButton').addEventListener('click', async () => {
     const { catImageUrl, randomCatFact } = await fetchCatImage();
 
     if (catImageUrl) {
-      // Display the cat image
       displayCat(catImageUrl);
-
-      // Display the cat fact
       displayCatFact(randomCatFact);
 
       // Check if the cat fact contains the word "sleep"
       if (randomCatFact.toLowerCase().includes('sleep')) {
-        // Change the background color if "sleep" is found in the fact
         document.body.style.backgroundColor = 'lightblue';
 
       } else {
-        // Reset the background color to the default
         document.body.style.backgroundColor = 'lightgray';
         document.body.style.color = 'black';
       }
     } else {
-      // Handle errors if necessary
       console.error('Failed to fetch a cat image.');
     }
   } catch (error) {
-    // Handle any unexpected errors
     console.error('An error occurred:', error);
   }
 });
-
-document.querySelector('#clearCatsButton').addEventListener('click', () => {
-  // Clear the cat image
-  clearCatImage();
-
-  // Clear the cache (force cache reload)
-  fetchCatImage(true);
-});
-
-// Function to clear the cat image
-const clearCatImage = () => {
-  const catImage = document.getElementById('catImage');
-  if (catImage) {
-    catImage.src = ''; // Clear the image source
-  }
-};
 
 document.getElementById('sortBy').addEventListener('change', (event) => {
   const selectedValue = event.target.value;
@@ -97,7 +74,6 @@ document.getElementById('sortBy').addEventListener('change', (event) => {
     // Display whiskers facts
     displayCatFactsByCategory('whiskers');
   } else if (selectedValue === 'allcats') {
-    // Display all cat facts
     displayAllCatFacts();
   }
 });
@@ -105,19 +81,17 @@ document.getElementById('sortBy').addEventListener('change', (event) => {
 // Function to display the cat fact
 const displayCatFactsByCategory = (category) => {
   const catFactsContainer = document.getElementById('cats');
-  catFactsContainer.innerHTML = ''; // Clear the existing cat facts
+  catFactsContainer.innerHTML = ''; 
 
   const filteredFacts = catFacts.filter((fact) => {
-    // Modify the condition based on the selected category (e.g., "whiskers")
     if (category === 'whiskers') {
       return fact.includes('whiskers');
     }
-    // Add more conditions for other categories if needed
   });
 
   // Display the filtered cat facts
   filteredFacts.forEach((fact) => {
-    const catFactElement = document.createElement('p'); // Define catFactElement here
+    const catFactElement = document.createElement('p'); 
     catFactElement.textContent = fact;
     catFactsContainer.appendChild(catFactElement);
   });
@@ -126,11 +100,11 @@ const displayCatFactsByCategory = (category) => {
 // Function to display all cat facts
 const displayAllCatFacts = () => {
   const catFactsContainer = document.getElementById('cats');
-  catFactsContainer.innerHTML = ''; // Clear the existing cat facts
+  catFactsContainer.innerHTML = ''; 
 
   // Display all cat facts
   catFacts.forEach((fact) => {
-    const catFactElement = document.createElement('p'); // Define catFactElement here
+    const catFactElement = document.createElement('p'); 
     catFactElement.textContent = fact;
     catFactsContainer.appendChild(catFactElement);
   });
