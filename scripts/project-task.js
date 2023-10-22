@@ -112,10 +112,12 @@ const displayAllCatFacts = () => {
 
 // Function to display a cat fact
 const displayCatFact = (fact) => {
-  const catFactsContainer = document.getElementById('cats');
+  const catFactsContainer = document.getElementById('catFactContainer');
   const catFactElement = document.createElement('p');
   catFactElement.textContent = fact;
   catFactsContainer.appendChild(catFactElement);
 };
+
+
 
 

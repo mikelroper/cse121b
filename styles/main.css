@@ -315,52 +315,55 @@ footer {
 
 
 
-/* cat code */    
-#sortBy {
-    display: block;
-    margin: 0 auto;
+    /* cat code */    
+    #sortBy {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    /* Center the "See Cats" button */
+    #seeCatsButton {
+        display: block;
+        margin: 10px auto; 
+    }
+
+    #clearCatsButton {
+        display: block;
+        margin: 10px auto; 
+    }
+    
+    /* Center the cat images within the #cats container */
+    #cats {
     text-align: center;
-  }
-  
-  /* Center the "See Cats" button */
-#seeCatsButton {
+    }
+
+    /* Style for the container that holds both the cat image and fact */
+    #catImageContainer {
+    position: relative; 
+    text-align: center; 
+    }
+
+    /* Style for the cat image */
+    #catImage {
     display: block;
-    margin: 10px auto; 
-  }
+    max-width: 100%; 
+    }
 
-#clearCatsButton {
-    display: block;
-    margin: 10px auto; 
-  }
-  
- /* Center the cat images within the #cats container */
-#cats {
-  text-align: center;
-}
-
-/* Style for the container that holds both the cat image and fact */
-#catImageContainer {
-  position: relative; 
-  text-align: center; 
-}
-
-/* Style for the cat image */
-#catImage {
-  display: block;
-  max-width: 100%; 
-}
-
-/* Style for the cat fact text */
-#catFact {
-  background-color: rgba(255, 255, 255, 0.8); 
-  position: absolute; /* Position the cat fact absolutely within the container */
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  padding: 10px; 
-  text-align: left; 
-  z-index: 1; 
-}
-
+    /* Style for the cat fact text */
+    #catFact {
+    background-color: rgba(255, 255, 255, 0.8); 
+    position: absolute; /* Position the cat fact absolutely within the container */
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    padding: 10px; 
+    text-align: left; 
+    z-index: 1; 
+    }
+    #catFactContainer {
+        text-align: center;
+        margin-top: 10px;
+    }
 
 }
